@@ -1,0 +1,155 @@
+@import "../../common/base.less";
+.webgame{
+  height:auto;
+  width:100%;
+  .tab{
+      .px2rem(height, 42);
+      width:100%;
+  }
+.top-banner{
+      width:100%;
+      display:flex;
+      flex-direction: row;
+      img{
+        .px2rem(width, 678);
+        .px2rem(height, 208); 
+      }
+      .download{
+          .px2rem(width, 280);
+          background:rgba(0,4,9,0.6);
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color:#fff;
+          h3{
+              .px2rem(font-size, 16)
+          }
+          p{
+              .px2rem(font-size, 12)
+          }
+          .download-btn{
+              .px2rem(width, 154);
+              .px2rem(height, 32);
+              .px2rem(border-radius, 2);
+              background:#6196ec;
+              color:#fff;
+              display:flex;
+              justify-content: center;
+              align-items: center;
+                .bulk{
+                    .px2rem(font-size, 10);
+                }
+          }          
+      }
+}
+.mid-banner{
+          width:100%;
+          .px2rem(height, 248);
+          .px2rem(padding-top, 30);
+          .multiPx2rem(padding, 30, 44, 30, 44);
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .item{
+              .px2rem(height, 187);
+              .px2rem(width, 210);
+              background:#ddd;
+          }
+}
+      .recommend{
+          .multiPx2rem(padding,0,30,0,30);
+          width:100%;        
+          .title{
+              display:flex;
+              flex-direction: row;
+                .px2rem(line-height, 16);
+              
+              h3{
+                .px2rem(padding-left, 12);
+                .px2rem(font-size, 14);
+                .px2rem(height, 14);             
+                color:#565656;  
+              }
+              p{
+                 .px2rem(font-size, 12);      
+                 .px2rem(height, 12);        
+                color:#575757;   
+              }
+              .filler{
+                  flex-grow: 1;
+                  .px2rem(height, 14); 
+              }
+              .line{
+              .px2rem(width, 3);
+              .px2rem(height, 16);
+              background:#0063FF;
+              }
+          }
+          .list{
+              
+              width:100%;
+              display:flex;
+              flex-wrap:wrap;
+              
+              justify-content: space-between;
+              .item{
+                  .px2rem(width, 293);
+                  .px2rem(height, 260);
+                  .px2rem(padding-bottom,30);
+                  background:#FFF;
+                  
+                  img{
+                      .px2rem(width,293);
+                      .px2rem(height,160);
+                  }
+                  .intro{
+                      background: #fff;
+                      .px2rem(width,293);
+                      .px2rem(height,70);
+                      .px2rem(margin-top,-4);
+//                      border:1px solid;
+                      box-shadow: 1px 1px 1px #ddd;
+                      .multiPx2rem(padding,10,10,0,10);
+                      h3{
+                      .px2rem(height,12);
+                       .px2rem(font-size,12);
+                       .px2rem(margin-top,-3); 
+                       color:#565656;  
+                      }
+                      p{
+                       .px2rem(width,283);
+                      .px2rem(height,14);
+//                    .px2rem(line-height,10);
+//                     .px2rem(margin-top,-5);  
+                       .px2rem(font-size,10);
+                       white-space: nowrap;
+                       text-overflow: ellipsis;
+                       overflow:hidden; 
+                       color:#999;  
+                      }
+                      div{
+                          color:#999;
+                          display:flex;
+                          flex-direction: row;
+                          .px2rem(font-size,10);   
+                           .px2rem(margin-top,-2);  
+                          .px2rem(height,10);  
+                          .num{
+                              display:block;
+                             .px2rem(width,14); 
+                             .px2rem(height,14);
+                             .px2rem(line-height,14); 
+                             background: #0063FF;
+                             text-align: center;
+                             color:#FFF;
+                          } 
+                          .num-hot{
+                              background: #FF0000;
+                          }
+                      }
+                }                  
+              }
+          }
+      }
+}
