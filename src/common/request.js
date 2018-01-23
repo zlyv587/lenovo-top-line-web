@@ -76,6 +76,9 @@ const request = (url = '', data = {}, method = 'get', options = {}) => {
             _success(res);
             _complete();
         }).catch(err => {
+            if (err.message.cancel) {
+                return false;
+            }
             resolve(err);// 这样系统会吞掉err，业务层面就不用再写catch方法处理异常了
             complete();
             handleError(err, config);// 可以把请求信息抛出去
