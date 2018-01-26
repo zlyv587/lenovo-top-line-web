@@ -1,7 +1,7 @@
 /**
  * Created by Lzhang on 2017/12/11.
  */
-
+import ChoiceWe from ".//index.vue"
 export default {
     data () {
         return {

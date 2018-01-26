@@ -1,0 +1,120 @@
+@import "../../common/base.less";
+
+p{
+  margin: 0;
+}
+.clear{
+  clear:both;
+}
+#appFilm{
+  //.px2rem(padding-top, 78);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  .px2rem(font-size, 18);
+  color: #fff;
+  background-color: #4c496d;
+  .banner{
+    width: 100%;
+    .px2rem(height, 70);
+    background-color: #3b3e72;
+    p{
+      .px2rem(line-height, 70);
+      display: inline-block;
+      .px2rem(margin-left, 20);
+      margin-bottom: 0;
+      float: left;
+    }
+    ul{
+      float: left;
+      height: 100%;
+      li{
+        float: left;
+        .px2rem(width, 68);
+        height: 100%;
+        .px2rem(margin-left, 36);
+        a{
+          width: 100%;
+          .px2rem(height, 32);
+          .px2rem(line-height, 32);
+          .px2rem(margin-top, 19);
+          text-align: center;
+          display: block;
+          .px2rem(border-radius, 4);
+        }
+      }
+      .selected a{
+        background-color: #f3d202;
+        color: #8a5400;
+      }
+    }
+  }
+  .sort{
+    width: 100%;
+    .px2rem(padding-top, 20);
+    .px2rem(padding-bottom, 20);
+    border-bottom: 1px solid #6c6c6d;
+    p{
+      display: inline-block;
+    }
+    div{
+      display: inline-block;
+      .px2rem(margin-left, 46);
+      i{
+        display: inline-block;
+        .px2rem(width, 20);
+        .px2rem(height, 20);
+        .px2rem(line-height, 20);
+        font-style: normal;
+        text-align: center;
+        background-color: #fff;
+        cursor:pointer;
+        .px2rem(margin-right, 10);
+        .px2rem(border-radius, 3);
+      }
+    }
+    .selected i{
+      background-color: #f4d302;
+    }
+  }
+  .vault{
+    width: 100%;
+    ul{
+      display: flex;
+      flex-flow: wrap;
+      .px2rem(margin-bottom, 68);
+      li{
+        .px2rem(margin-right, 19);
+        .filmImg{
+          .px2rem(width, 254);
+          .px2rem(height, 143);
+          background-color: yellow;
+          position: relative;
+          .px2rem(margin-top, 20);
+          .px2rem(margin-bottom, 12);
+          p{
+            position: absolute;
+            .px2rem(bottom, 8);
+          }
+          p:first-child{
+            .px2rem(left, 6);
+          }
+          p:last-child{
+            .px2rem(right, 6);
+          }
+        }
+      }
+      li>p{
+        .px2rem(width, 254);
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      li:nth-child(5n){
+        //background-color: #fff;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
