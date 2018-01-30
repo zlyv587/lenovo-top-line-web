@@ -1,292 +1,846 @@
 @import "../../common/base.less";
-.home {
-  width:100%;
-  height:auto;
-  background:#534c73;
-  .container{
-      margin:0 auto;
-  }
-  .topline{
-      background:#8579bc;
-      .px2rem(width, 1346);
-      .px2rem(height, 621);
-      h2{
-          .px2rem(font-size,36);
-          color:#f3d202;
-          font-weight: bold;
-      }
-        .videos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        
-        .big{
-            .px2rem(width,482);
-            .px2rem(height,288);
-            .px2rem(margin-top, 20);
-            display: flex;
-            flex-direction: column;
-            .img {
-                .px2rem(height, 254);
-                width:100%;
-                background: deepskyblue;
-            }
-            .msg {
-                .px2rem(height,30);
-                width:100%;
-                background: #615a87;
-            }
+.home_out{
+    width: 100%;
+    background:#534c73;
+    .home {
+        .px2rem(width, 1346);
+        height:auto;
+        background:#534c73;
+        margin: 0 auto;
+        .container{
+            margin:0 auto;
         }
-        .rightitem{
-            .px2rem(width,828);
-            .px2rem(height,288);
-            justify-content: space-between;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            .item {
+        .topline{
+            background:#8579bc;
+            .px2rem(width, 1346);
+            .px2rem(height, 621);
+            .topline_top{
+                .px2rem(width, 202);
+                .px2rem(height, 95);
+                .px2rem(margin-left, 574);
+                float: left;
+                .topline_top_ico{
+                    .px2rem(width, 46);
+                    .px2rem(height, 40);
+                    .px2rem(margin-top, 37);
+                    .px2rem(margin-right, 10);
+                    float: left;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .top_line{
+                    .px2rem(font-size,36);
+                    color:#f3d202;
+                    font-weight: bold;
+                    .px2rem(padding-top, 31);
+                }
+            }
+            .change_top{
+                float: right;
                 .px2rem(width, 180);
-                .px2rem(height, 134);
+                .px2rem(height, 95);
+                .change_top_btn{
+                    .px2rem(font-size, 18);
+                    .px2rem(width, 55);
+                    color: #ffffff;
+                    .px2rem(margin-top, 54);
+                    .px2rem(margin-left, 92);
+                    float: left;
+                }
+                .change_top_sign{
+                    .px2rem(width, 25);
+                    .px2rem(height, 25);
+                    background-color: #f10605;
+                    text-align: center;
+                    .px2rem(line-height, 25);
+                    border-radius: 100%;
+                    color: #ffffff;
+                    float: left;
+                    .px2rem(margin-top, 53);
+                    .px2rem(margin-left, 8);
+                }
+            }
+                .videos{
                 display: flex;
-                flex-direction: column;
-                .img {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                
+                .big{
+                    .px2rem(width,482);
+                    .px2rem(height,288);
+                    
+                    display: flex;
+                    flex-direction: column;
+                    .big_video{
+                        .px2rem(height, 254);
+                        width:100%;
+                        background: #c9c5ff;
+                        position: relative;
+                        .dingwei{
+                            .px2rem(width, 466);
+                            .px2rem(height, 214);
+                            position: absolute;
+                            left: 489px;
+                        }
+                        .big_video_grad{
+                            .px2rem(width, 482);
+                            .px2rem(height, 30);
+                            .px2rem(margin-top, 224);
+                            .px2rem(line-height, 30);
+                            background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                            background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                            background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                            .grad_left{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                .px2rem(padding-left, 8);
+                                float: left;
+                            }
+                            .grad_right{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                float: right;
+                                .px2rem(padding-right, 8);
+                            }
+                        }
+                    }
+                    .msg{
+                        .px2rem(height,34);
+                        width:100%;
+                        background: #615a87;
+                        color: #ffffff;
+                        .px2rem(font-size, 18);
+                        .px2rem(padding-top, 4);
+                        .px2rem(padding-left, 8);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .rightitem{
+                    .px2rem(width,828);
+                    .px2rem(height,288);
+                    justify-content: space-between;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    .item{
+                        .px2rem(width, 180);
+                        .px2rem(height, 134);
+                        display: flex;
+                        flex-direction: column;
+                        .item_small{
+                            .px2rem(height, 100);
+                            width:100%;
+                            background: #c9c5ff;
+                            .small_video_grad{
+                                .px2rem(width, 180);
+                                .px2rem(height, 30);
+                                .px2rem(margin-top, 70);
+                                .px2rem(line-height, 30);
+                                background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                                background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                                background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                                background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                                .grad_left{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    .px2rem(padding-left, 8);
+                                    float: left;
+                                }
+                                .grad_right{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    float: right;
+                                    .px2rem(padding-right, 8);
+                                }
+                            }
+                        }
+                        .msg {
+                            .px2rem(height,34);
+                            width:100%;
+                            background: #615a87;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(padding-top, 4);
+                            .px2rem(padding-left, 8);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+                .big, .rightitem, .bottomitem{
+                    .item{
+                        .px2rem(margin-bottom, 20);
+                    }
+                }
+                .bottomitem{
+                    width:100%;
+                    .px2rem(margin-top, 20);
+                    .px2rem(height, 178);
+                    justify-content: space-between;
+                    display: flex;
+                    flex-direction: row;
+                    .item{
+                        .px2rem(width, 254);
+                        .px2rem(height, 178);
+                        display: flex;
+                        flex-direction: column;
+                        .bottom_video{
+                            .px2rem(height, 144);
+                            width:100%;
+                            background-color: #c9c5ff;
+                            .bottom_video_grad{
+                                .px2rem(width, 254);
+                                .px2rem(height, 30);
+                                .px2rem(margin-top, 114);
+                                .px2rem(line-height, 30);
+                                background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                                background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                                background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                                background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                                .grad_left{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    .px2rem(padding-left, 8);
+                                    float: left;
+                                }
+                                .grad_right{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    float: right;
+                                    .px2rem(padding-right, 8);
+                                }
+                            }
+                        }
+                        .msg {
+                            .px2rem(height,34);
+                            width:100%;
+                            background: #615a87;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(padding-top, 4);
+                            .px2rem(padding-left, 8);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+            }
+            .message{
+            .px2rem(width, 1346);
+            
+            .message_top{
+                .px2rem(height, 89);
+                .message_top_ico{
+                    .px2rem(width, 32);
+                    .px2rem(height, 30);
+                    float: left;
+                    .px2rem(margin-top, 40);
+                    .px2rem(margin-right, 9);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .message_top_line{
+                    float: left;
+                    .px2rem(font-size, 28);
+                    color: #ffffff;
+                    .px2rem(margin-top, 35);
+                }
+                .message_change_top{
+                    float: right;
+                    .px2rem(height, 89);
+                    .change_top_btn{
+                        float: left;
+                        .px2rem(font-size, 18);
+                        color: #ffffff;
+                        .px2rem(margin-top, 48);
+                    }
+                    .change_top_sign{
+                        .px2rem(width, 25);
+                        .px2rem(height, 25);
+                        background-color: #f10605;
+                        text-align: center;
+                        .px2rem(line-height, 25);
+                        border-radius: 100%;
+                        color: #ffffff;
+                        float: left;
+                        .px2rem(margin-top, 48);
+                        .px2rem(margin-left, 10);
+                    }
+                    .change_top_more{
+                        float: left;
+                        .more_word{
+                            float: left;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(margin-top, 48);
+                            .px2rem(margin-left, 40);
+                        }
+                        .more_arrow{
+                            .px2rem(width, 12);
+                            .px2rem(height, 20);
+                            .px2rem(margin-top, 50);
+                            .px2rem(margin-left, 10);
+                            float: left;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+                .videos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                
+                .big{
+                    .px2rem(width,482);
+                    .px2rem(height,288);
+                    
+                    display: flex;
+                    flex-direction: column;
+                    .big_video{
+                        .px2rem(height, 254);
+                        width:100%;
+                        background-color: #c9c5ff;
+                        .big_video_grad{
+                            .px2rem(width, 482);
+                            .px2rem(height, 30);
+                            .px2rem(margin-top, 224);
+                            .px2rem(line-height, 30);
+                            background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                            background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                            background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                            .grad_left{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                .px2rem(padding-left, 8);
+                                float: left;
+                            }
+                            .grad_right{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                float: right;
+                                .px2rem(padding-right, 8);
+                            }
+                        }
+                    }
+                    .msg{
+                        .px2rem(height,34);
+                        width:100%;
+                        background: #615a87;
+                        color: #ffffff;
+                        .px2rem(font-size, 18);
+                        .px2rem(padding-top, 4);
+                        .px2rem(padding-left, 8);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .rightitem{
+                    .px2rem(width,828);
+                    .px2rem(height,288);
+                    justify-content: space-between;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    .item{
+                        .px2rem(width, 180);
+                        .px2rem(height, 134);
+                        display: flex;
+                        flex-direction: column;
+                        .px2rem(margin-bottom, 20);
+                        .item_small{
+                            .px2rem(height, 100);
+                            width:100%;
+                            background: #c9c5ff;
+                            .small_video_grad{
+                                .px2rem(width, 180);
+                                .px2rem(height, 30);
+                                .px2rem(margin-top, 70);
+                                .px2rem(line-height, 30);
+                                background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                                background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                                background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                                background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                                .grad_left{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    .px2rem(padding-left, 8);
+                                    float: left;
+                                }
+                                .grad_right{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    float: right;
+                                    .px2rem(padding-right, 8);
+                                }
+                            }
+                        }
+                        .msg {
+                            .px2rem(height,34);
+                            width:100%;
+                            background: #615a87;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(padding-top, 4);
+                            .px2rem(padding-left, 8);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+                .ad{
+                    width:100%;
+                    .px2rem(height, 148);
+                    .px2rem(margin-top, 40);
+                    background: #fff;
+                }
+            }
+            }
+            .amuse{
+            .px2rem(width, 1346);
+            
+            .amuse_top{
+                .px2rem(height, 79);
+                .message_top_ico{
+                    .px2rem(width, 27);
+                    .px2rem(height, 30);
+                    float: left;
+                    .px2rem(margin-top, 40);
+                    .px2rem(margin-right, 9);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .message_top_line{
+                    float: left;
+                    .px2rem(font-size, 28);
+                    color: #ffffff;
+                    .px2rem(margin-top, 35);
+                }
+                .message_change_top{
+                    float: right;
+                    .px2rem(height, 89);
+                    .change_top_btn{
+                        float: left;
+                        .px2rem(font-size, 18);
+                        color: #ffffff;
+                        .px2rem(margin-top, 48);
+                    }
+                    .change_top_sign{
+                        .px2rem(width, 25);
+                        .px2rem(height, 25);
+                        background-color: #f10605;
+                        text-align: center;
+                        .px2rem(line-height, 25);
+                        border-radius: 100%;
+                        color: #ffffff;
+                        float: left;
+                        .px2rem(margin-top, 48);
+                        .px2rem(margin-left, 10);
+                    }
+                    .change_top_more{
+                        float: left;
+                        .more_word{
+                            float: left;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(margin-top, 48);
+                            .px2rem(margin-left, 40);
+                        }
+                        .more_arrow{
+                            .px2rem(width, 12);
+                            .px2rem(height, 20);
+                            .px2rem(margin-top, 50);
+                            .px2rem(margin-left, 10);
+                            float: left;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+                .videos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                .item{
+                    .px2rem(width, 254);
+                    .px2rem(height, 178);
+                    display: flex;
+                    flex-direction: column;
+                    .px2rem(margin-bottom, 20);
+                    .amuse_video{
+                        .px2rem(height, 144);
+                        width:100%;
+                        background-color: #c9c5ff;
+                        .amuse_video_grad{
+                            .px2rem(width, 254);
+                            .px2rem(height, 30);
+                            .px2rem(margin-top, 114);
+                            .px2rem(line-height, 30);
+                            background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                            background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                            background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                            .grad_left{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                .px2rem(padding-left, 8);
+                                float: left;
+                            }
+                            .grad_right{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                float: right;
+                                .px2rem(padding-right, 8);
+                            }
+                        }
+                    }
+                    .msg{
+                        .px2rem(height,34);
+                        width:100%;
+                        background: #615a87;
+                        color: #ffffff;
+                        .px2rem(font-size, 18);
+                        .px2rem(padding-top, 4);
+                        .px2rem(padding-left, 8);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            }
+            .joke{
+            .px2rem(width, 1346);
+            
+            .joke_top{
+                .px2rem(height, 69);
+                .joke_top_ico{
+                    .px2rem(width, 30);
+                    .px2rem(height, 30);
+                    float: left;
+                    .px2rem(margin-top, 20);
+                    .px2rem(margin-right, 9);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .joke_top_line{
+                    float: left;
+                    .px2rem(font-size, 28);
+                    color: #ffffff;
+                    .px2rem(margin-top, 15);
+                }
+                .joke_change_top{
+                    float: right;
+                    .px2rem(height, 69);
+                    .change_top_btn{
+                        float: left;
+                        .px2rem(font-size, 18);
+                        color: #ffffff;
+                        .px2rem(margin-top, 28);
+                    }
+                    .change_top_sign{
+                        .px2rem(width, 25);
+                        .px2rem(height, 25);
+                        background-color: #f10605;
+                        text-align: center;
+                        .px2rem(line-height, 25);
+                        border-radius: 100%;
+                        color: #ffffff;
+                        float: left;
+                        .px2rem(margin-top, 28);
+                        .px2rem(margin-left, 10);
+                    }
+                    .change_top_more{
+                        float: left;
+                        .more_word{
+                            float: left;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(margin-top, 28);
+                            .px2rem(margin-left, 40);
+                        }
+                        .more_arrow{
+                            .px2rem(width, 12);
+                            .px2rem(height, 20);
+                            .px2rem(margin-top, 30);
+                            .px2rem(margin-left, 10);
+                            float: left;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+                .videos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                
+                .item{
+                    .px2rem(width, 254);
+                    .px2rem(height, 178);
+                    display: flex;
+                    flex-direction: column;
+                    .px2rem(margin-bottom, 20);
+                    .joke_video{
+                        .px2rem(height, 144);
+                        width:100%;
+                        background-color: #c9c5ff;
+                        .joke_video_grad{
+                            .px2rem(width, 254);
+                            .px2rem(height, 30);
+                            .px2rem(margin-top, 114);
+                            .px2rem(line-height, 30);
+                            background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                            background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                            background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                            .grad_left{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                .px2rem(padding-left, 8);
+                                float: left;
+                            }
+                            .grad_right{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                float: right;
+                                .px2rem(padding-right, 8);
+                            }
+                        }
+                    }
+                    .msg{
+                        .px2rem(height,34);
+                        width:100%;
+                        background: #615a87;
+                        color: #ffffff;
+                        .px2rem(font-size, 18);
+                        .px2rem(padding-top, 4);
+                        .px2rem(padding-left, 8);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            }
+        .talkshow{
+            .px2rem(width, 1346);
+            
+            .talkshow_top{
+                .px2rem(height, 68);
+                .talkshow_top_ico{
+                    .px2rem(width, 20);
+                    .px2rem(height, 30);
+                    float: left;
+                    .px2rem(margin-top, 20);
+                    .px2rem(margin-right, 14);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .talkshow_top_line{
+                    float: left;
+                    .px2rem(font-size, 28);
+                    color: #ffffff;
+                    .px2rem(margin-top, 15);
+                }
+                .talkshow_change_top{
+                    float: right;
+                    .px2rem(height, 89);
+                    .change_top_btn{
+                        float: left;
+                        .px2rem(font-size, 18);
+                        color: #ffffff;
+                        .px2rem(margin-top, 28);
+                    }
+                    .change_top_sign{
+                        .px2rem(width, 25);
+                        .px2rem(height, 25);
+                        background-color: #f10605;
+                        text-align: center;
+                        .px2rem(line-height, 25);
+                        border-radius: 100%;
+                        color: #ffffff;
+                        float: left;
+                        .px2rem(margin-top, 28);
+                        .px2rem(margin-left, 10);
+                    }
+                    .change_top_more{
+                        float: left;
+                        .more_word{
+                            float: left;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(margin-top, 28);
+                            .px2rem(margin-left, 40);
+                        }
+                        .more_arrow{
+                            .px2rem(width, 12);
+                            .px2rem(height, 20);
+                            .px2rem(margin-top, 30);
+                            .px2rem(margin-left, 10);
+                            float: left;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .videos{
+                // display: flex;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                width: 100%;
+                // justify-content: space-between;
+                .px2rem(height,288);
+                
+                .big{
+                    .px2rem(width,482);
+                    .px2rem(height,288);
+                    float: left;
+                    display: flex;
+                    flex-direction: column;
+                    .big_video{
+                        .px2rem(height, 254);
+                        width:100%;
+                        background-color: #c9c5ff;
+                        .big_video_grad{
+                            .px2rem(width, 482);
+                            .px2rem(height, 30);
+                            .px2rem(margin-top, 224);
+                            .px2rem(line-height, 30);
+                            background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                            background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                            background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                            .grad_left{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                .px2rem(padding-left, 8);
+                                float: left;
+                            }
+                            .grad_right{
+                                color: #ffffff;
+                                .px2rem(font-size, 14);
+                                float: right;
+                                .px2rem(padding-right, 8);
+                            }
+                        }
+                    }
+                    .msg{
+                        .px2rem(height,34);
+                        width:100%;
+                        background: #615a87;
+                        color: #ffffff;
+                        .px2rem(font-size, 18);
+                        .px2rem(padding-top, 4);
+                        .px2rem(padding-left, 8);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .ceshi{
+                    .px2rem(width, 700);
                     .px2rem(height, 100);
-                    width:100%;
-                    background: deepskyblue;
+                    float: left;
+                    .px2rem(margin-left, 36);
                 }
-                .msg {
-                    .px2rem(height,30);
-                    width:100%;
-                    background: #615a87;
+                .rightitem{
+                    .px2rem(width,827);
+                    .px2rem(height,288);
+                    // justify-content: space-between;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // flex-direction: row;
+                    float: left;
+                    .item{
+                        .px2rem(width, 180);
+                        .px2rem(height, 134);
+                        // display: flex;
+                        // flex-direction: column;
+                        float: left;
+                        // .px2rem(margin-bottom, 20);
+                        .item_small{
+                            .px2rem(height, 100);
+                            width:100%;
+                            background: #c9c5ff;
+                            .small_video_grad{
+                                .px2rem(width, 180);
+                                .px2rem(height, 30);
+                                .px2rem(margin-top, 70);
+                                .px2rem(line-height, 30);
+                                background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,1)); /* Safari 5.1 - 6.0 */
+                                background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Opera 11.1 - 12.0 */
+                                background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* Firefox 3.6 - 15 */
+                                background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)); /* 标准的语法（必须放在最后） */
+                                .grad_left{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    .px2rem(padding-left, 8);
+                                    float: left;
+                                }
+                                .grad_right{
+                                    color: #ffffff;
+                                    .px2rem(font-size, 14);
+                                    float: right;
+                                    .px2rem(padding-right, 8);
+                                }
+                            }
+                        }
+                        .msg {
+                            .px2rem(height,34);
+                            width:100%;
+                            background: #615a87;
+                            color: #ffffff;
+                            .px2rem(font-size, 18);
+                            .px2rem(padding-top, 4);
+                            .px2rem(padding-left, 8);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
                 }
+                
+            }
             }
         }
-        .big, .rightitem, .bottomitem{
-            .item{
-                .px2rem(margin-top, 20);
-            }
-        }
-        .bottomitem{
-            width:100%;
-            .px2rem(height, 178);
-            justify-content: space-between;
-            display: flex;
-            flex-direction: row;
-            .item {
-                .px2rem(width, 254);
-                .px2rem(height, 178);
-                display: flex;
-                flex-direction: column;
-                .img {
-                    .px2rem(height, 144);
-                    width:100%;
-                    background: deepskyblue;
-                }
-                .msg {
-                    .px2rem(height,30);
-                    width:100%;
-                    background: #615a87;
-                }
-            }
-        }
-     }
-    }
-    .message{
-      .px2rem(width, 1346);
-      .px2rem(margin-top, 40);
-      h2{
-          .px2rem(font-size,36);
-          color:#f3d202;
-          font-weight: bold;
-      }
-        .videos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        
-        .big{
-            .px2rem(width,482);
-            .px2rem(height,288);
-            .px2rem(margin-top, 20);
-            display: flex;
-            flex-direction: column;
-            .img {
-                .px2rem(height, 254);
-                width:100%;
-                background: deepskyblue;
-            }
-            .msg {
-                .px2rem(height,30);
-                width:100%;
-                background: #615a87;
-            }
-        }
-        .rightitem{
-            .px2rem(width,828);
-            .px2rem(height,288);
-            justify-content: space-between;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            .item {
-                .px2rem(margin-top, 20);
-                .px2rem(width, 180);
-                .px2rem(height, 134);
-                display: flex;
-                flex-direction: column;
-                .img {
-                    .px2rem(height, 100);
-                    width:100%;
-                    background: deepskyblue;
-                }
-                .msg {
-                    .px2rem(height,30);
-                    width:100%;
-                    background: #615a87;
-                }
-            }
-        }
-        .ad{
-            width:100%;
-            .px2rem(height, 148);
-            .px2rem(margin-top, 40);
-            background: #fff;
-        }
-     }
-    }
-    .amuse{
-      .px2rem(width, 1346);
-      .px2rem(margin-top,40);
-      
-      h2{
-          .px2rem(font-size,36);
-          color:#f3d202;
-          font-weight: bold;
-      }
-        .videos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        .item{
-            .px2rem(width,254);
-            .px2rem(height,178);
-            .px2rem(margin-top, 20);
-            display: flex;
-            flex-direction: column;
-            .img {
-                .px2rem(height, 144);
-                width:100%;
-                background: deepskyblue;
-            }
-            .msg {
-                .px2rem(height,30);
-                width:100%;
-                background: #615a87;
-            }
-        }
-     }
-    }
-    .joke{
-      .px2rem(width, 1346);
-      .px2rem(margin-top, 40);
-      h2{
-          .px2rem(font-size,36);
-          color:#f3d202;
-          font-weight: bold;
-      }
-        .videos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        
-        .item{
-            .px2rem(width,254);
-            .px2rem(height,178);
-            .px2rem(margin-top, 20);
-            display: flex;
-            flex-direction: column;
-            .img {
-                .px2rem(height, 144);
-                width:100%;
-                background: deepskyblue;
-            }
-            .msg {
-                .px2rem(height,30);
-                width:100%;
-                background: #615a87;
-            }
-        }
-     }
-    }
-   .talkshow{
-      .px2rem(width, 1346);
-      .px2rem(margin-top, 40);
-      h2{
-          .px2rem(font-size,36);
-          color:#f3d202;
-          font-weight: bold;
-      }
-        .videos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        
-        .big{
-            .px2rem(width,482);
-            .px2rem(height,288);
-            .px2rem(margin-top, 20);
-            display: flex;
-            flex-direction: column;
-            .img {
-                .px2rem(height, 254);
-                width:100%;
-                background: deepskyblue;
-            }
-            .msg {
-                .px2rem(height,30);
-                width:100%;
-                background: #615a87;
-            }
-        }
-        .rightitem{
-            .px2rem(width,828);
-            .px2rem(height,288);
-            justify-content: space-between;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            .item {
-                .px2rem(width, 180);
-                .px2rem(height, 134);
-                .px2rem(margin-top, 20);
-                display: flex;
-                flex-direction: column;
-                .img {
-                    .px2rem(height, 100);
-                    width:100%;
-                    background: deepskyblue;
-                }
-                .msg {
-                    .px2rem(height,30);
-                    width:100%;
-                    background: #615a87;
-                }
-            }
-        }
-        .loadmore{
-           .px2rem(height,50);
-           background: #999;
-        }
-     }
-    }
 }
