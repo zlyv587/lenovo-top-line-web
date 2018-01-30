@@ -41,3 +41,14 @@ init({
     }
 });
 
+$(function () {
+    $(".nano").nanoScroller();
+    $('.nano-content').scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            $("#backToTop").fadeIn(500);
+        } else {
+            $("#backToTop").fadeOut(500);
+        }
+    });
+});
+

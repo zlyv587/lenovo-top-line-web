@@ -39,11 +39,17 @@
     })();
 </script>
 <body>
-<div id="app"></div>
+<div class="nano">
+    <div class="nano-content">
+        <div id="app"></div>
+    </div>
+</div>
+
 
 <!-- built files will be auto injected -->
 <!--<script src="/static/simple-calendar.js"></script>-->
 <script src="<%=htmlWebpackPlugin.options.projectPath%>static/js/jquery.min.js"></script>
+<script src="<%=htmlWebpackPlugin.options.projectPath%>static/js/jquery.nanoscroller.min.js"></script>
 <script src="<%=htmlWebpackPlugin.options.projectPath%>static/js/echo.min.js"></script>
 </body>
 </html>
