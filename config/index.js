@@ -40,6 +40,13 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
+            '/topLine': {
+                target: 'http://epgapi1.test.epg.lenovo.com.cn/',
+                pathRewrite: {
+                    '^/topLine': ''
+                },
+                changeOrigin: true
+            },
             '/iworld': {
                 target: 'http://221.181.100.150:18090',
                 changeOrigin: true
