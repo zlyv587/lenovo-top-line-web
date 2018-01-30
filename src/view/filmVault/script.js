@@ -40,7 +40,7 @@ export default {
             window.sessionStorage.setItem("type", e);
             const id = e;
             this.activeName = e;
-            console.log(e)
+            // console.log(e)
             // this.$on("pagechange",(page)=>{
             //     console.log(page)
             // })
