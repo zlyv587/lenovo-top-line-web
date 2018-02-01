@@ -92,6 +92,7 @@ p{
           .px2rem(margin-top, 20);
           .px2rem(padding-right, 19);
           .play-img{
+            cursor: pointer;
             position: absolute;
             .px2rem(width,50);
             .px2rem(height,50);
@@ -100,16 +101,16 @@ p{
             z-index: 9;
             display: none;
           }
-        .filmImg{
+        .filmImg{         
+          .px2rem(width, 254);
+          .px2rem(height, 143);
+          position: relative;
+          // .px2rem(margin-bottom, 12);
           .video-img{
             width: 100%;
             height: 100%;
             border-radius: 5px;
           }
-          .px2rem(width, 254);
-          .px2rem(height, 143);
-          position: relative;
-          .px2rem(margin-bottom, 12);
           .filmImg-title{          
             position: absolute;
             width: 100%;
@@ -138,6 +139,8 @@ p{
             opacity: .6;
             display: none;
             position: absolute;
+            .px2rem(border-radius, 5);  
+            cursor: pointer;           
             top: 0;
             left: 0;
             z-index: 8;
@@ -162,59 +165,26 @@ p{
       li:nth-child(5n):hover .triangle-left{
         display: block;        
       }
-      li:nth-child(4):hover .triangle-right{
+
+      li:nth-child(5n+4):hover .triangle-right{
         display: none;        
       }
-      li:nth-child(4):hover .triangle-left{
+      li:nth-child(5n+4):hover .triangle-left{
         display: block;        
       }
-      li:nth-child(4):hover .introduce{
+      li:nth-child(5n+4):hover .introduce{
         .px2rem(left, -485);        
-      }
-      li:nth-child(9):hover .triangle-right{
-        display: none;        
-      }
-      li:nth-child(9):hover .triangle-left{
-        display: block;        
-      }
-      li:nth-child(9):hover .introduce{
-        .px2rem(left, -485);        
-      }
-      li:nth-child(14):hover .triangle-right{
-        display: none;        
-      }
-      li:nth-child(14):hover .triangle-left{
-        display: block;        
-      }
-      li:nth-child(14):hover .introduce{
-        .px2rem(left, -485);        
-      }
-      li:nth-child(19):hover .triangle-right{
-        display: none;        
-      }
-      li:nth-child(19):hover .triangle-left{
-        display: block;        
-      }
-      li:nth-child(19):hover .introduce{
-        .px2rem(left, -485);        
-      }
-      li:nth-child(24):hover .triangle-right{
-        display: none;        
-      }
-      li:nth-child(24):hover .triangle-left{
-        display: block;        
-      }
-      li:nth-child(24):hover .introduce{
-        .px2rem(left, -485);        
-      }
+      }     
       li:hover .play-img{
         display: block;
       }
-      li>p{
+      .play-text{
         .px2rem(width, 254);
+        .px2rem(padding, 8);
         overflow: hidden;
         text-overflow:ellipsis;
         white-space: nowrap;
+        background-color: rgba(117, 114, 177, 0.5);
       }
       li:nth-child(5n){
         //background-color: #fff;
@@ -259,9 +229,7 @@ p{
           .px2rem(padding-left,20);
           .px2rem(padding-bottom,20);
           .px2rem(border-radius,6);          
-          background: rgba(0, 0, 0, .75); 
-          
-          
+          background: rgba(0, 0, 0, .75);          
           h4{
           .px2rem(font-size,22);            
           .px2rem(line-height,22);            
@@ -316,6 +284,3 @@ p{
   }
 }
 
-@media all and(min-width:700px) and (max-width: 1100px) {
-  
-}

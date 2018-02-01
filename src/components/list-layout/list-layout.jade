@@ -1,0 +1,15 @@
+include ./list-item
+
+mixin listLayout(data, config)
+    - stylesType = {'B6': 'one-col', 'E6': 'one-col-small', 'C1B4': 'one-col-large','B6-B6': 'two-col', 'E6-E6': 'two-col-small', 'F1D8': 'two-col-large', 'one-col': 'one-col', 'one-col-small': 'one-col-small', 'one-col-large': 'one-col-large','two-col': 'two-col', 'two-col-small': 'two-col-small', 'two-col-large': 'two-col-large',}
+    - sizeType = {'B6': '195-260', 'E6': '195-110', 'C1B4': '195-260,425-260','B6-B6': '195-260', 'E6-E6': '180-100', 'F1D8': '195-110,482-270'}
+    .layout-list-wrap(id="#{config && config.type ? 'layoutListWrap' : ''}", class="#{config && config.type ? stylesType[config.type] : ''}")
+        ul.list-wrap-content
+            each itemData, index in data
+                li.list-wrap-item
+                    if config && config.imgErrorSize
+                        +listItem(itemData, {lazyImg: config && config.lazyImg ? true : false, imgErrorSize: config.imgErrorSize, isFirstEle: index == 0, isRanks: config.isRanks})
+                    else
+                        +listItem(itemData, {lazyImg: config && config.lazyImg ? true : false, imgErrorSize: config && config.type ? sizeType[config.type] : '195-260', isFirstEle: index == 0, isRanks: config.isRanks})
+                    if config.isRanks
+                        span.list-rank #{index + 1}

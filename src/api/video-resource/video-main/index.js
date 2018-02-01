@@ -5,11 +5,12 @@ import {fetch} from  '../../../common/request';
 import serviceUrl from './serviceUrl';
 
 export default {
-    getCategoryTagApi(id,page) {
+    getCategoryTagApi(id,page,orderBy) {
         return fetch().get(serviceUrl.categoryTagUrl(id), {
             relativeId : 43,
             lSrc : 'pc',
-            page             
+            page ,
+            orderBy         
         });
     }
 }

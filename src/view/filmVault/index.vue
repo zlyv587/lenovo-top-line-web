@@ -3,31 +3,28 @@
         <div class="banner">
             <p>频道 :</p>
             <ul>
-                <!-- <li class="selected">
-                    <a href="#">全部</a>
-                </li> -->
-                <li v-for="title in titles" :key="title.clickUrl" :class="{'active':activeName ==title.clickUrl}" @click="getCategories(title.clickUrl)">
+                <li v-for="title in titles" :key="title.clickUrl" :class="{'active':activeName ==title.clickUrl}" @click="getCategories(title.clickUrl,1)">
                     <a href="#" >{{title.name}}</a>
                 </li>
             </ul>
         </div>
         <div class="sort">
             <p>排序 :</p>
-            <div class="hot selected">
+            <div class="hot" :class="(flag==false)?'selected':''" @click="orderByPlay">
                 <i>✔</i>
                 <p>热门</p>
             </div>
-            <div class="uptime">
+            <div class="uptime" :class="(flag==true)?'selected':''" @click="orderByTime">
                 <i>✔</i>
                 <p>更新时间</p>
             </div>
         </div>
         <div class="vault">
             <ul>
-                <li v-for="data in list" :key= 'data.outAlbumId' class="video-list">
+                <li v-for="(data,index) in list" :key="index" class="video-list">
                     <div class="filmImg">
                         <img :src=data.poster alt="" class="video-img">
-                        <div class="box-mark">
+                        <div class="box-mark" @click="playVideo(data)">
                             
                         </div>
                         <div class="filmImg-title clear">
@@ -36,7 +33,7 @@
                         </div>                      
                     </div>
                     <p class="play-text">{{data.title}}</p>
-                    <img src="../../../static/img/play_big.png" alt="" class="play-img">                 
+                    <img src="../../../static/img/play_big.png" alt="" class="play-img" @click="playVideo(data)">                 
                     <div class="introduce">
                         <div class="triangle-right"></div>
                         <div class="triangle-left"></div>
@@ -47,14 +44,14 @@
                                 <p class="details-num">播放量：<span>{{data.playCountCn}}</span></p>
                                 <p class="details-introduce">简介：<span>{{data.description}}</span></p>
                             </div>                            
-                            <h5><a href="">立即播放</a></h5>
+                            <h5 @click="playVideo(data)"><a href="##">立即播放</a></h5>
                         </div>
                     </div>
                 </li>                            
             </ul>
         </div>
         
-        <v-pagination :total="total" :current-page='current' @pagechange="pagechange"></v-pagination>
+        <v-pagination :total="total" :currentPage='current' @pagechange="pagechange" :pagegroup=totalPages></v-pagination>
     </div>
 </template>
 

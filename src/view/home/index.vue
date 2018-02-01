@@ -1,6 +1,6 @@
 <template>
-    <div class="hello">
-        <h1>jflewafjeawlef</h1>
+    <div>
+        <listLayout v-for="item, index in demoData" :key="index" :dataSource="item"></listLayout>
     </div>
 </template>
 

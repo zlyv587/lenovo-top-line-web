@@ -1,0 +1,204 @@
+@import '../../common/base.less';
+.layout-list-wrap {
+    position: relative;
+    overflow: hidden;
+    .list-wrap-content {
+        overflow: hidden;
+        margin-right: -0.35rem - .06rem;
+        .list-wrap-item {
+            position: relative;
+            float: left;
+            font-size: 0;
+        }
+    }
+}
+
+// 各种布局的样式重置
+#layoutListWrap{
+    .px2rem(width, 1550);
+    .list-item-wrap {
+        .px2rem(margin-bottom, 20);
+    }
+    // 一列布局 无大图
+    &.one-col {
+        .px2rem(height, 214);
+        .list-cover-wrap {
+            .px2rem(height, 144);
+        }
+        .list-item-wrap {
+            .px2rem(width, 254);
+            .px2rem(margin-right, 19);
+        }
+    }
+    // 一列布局 有大图
+    &.one-col-large {
+        .px2rem(height, 315);
+        .list-wrap-item:first-child .list-item-wrap {
+            .px2rem(width, 425);
+        }
+    }
+    // 一列布局 小item
+    &.one-col-small {
+        .px2rem(height, 165);
+        .list-cover-wrap {
+            .px2rem(height, 110);
+        }
+    }
+    // 二列布局 无大图
+    &.two-col {
+        .px2rem(height, 178);
+        .list-cover-wrap {
+            .px2rem(height, 144);
+            .list-grad{
+                .px2rem(width, 254);
+                
+            }
+        }
+        .list-item-wrap {
+            .px2rem(width, 254);
+            .px2rem(margin-right, 19);
+        }
+    }
+    // 二列布局 小item
+    &.two-col-small {
+        .px2rem(height, 345);
+        .list-cover-wrap {
+            .px2rem(height, 110);
+        }
+    }
+    // 二列布局 有大图
+    &.two-col-large {
+        .px2rem(height, 288);
+
+        .list-cover-wrap {
+            .px2rem(height, 100);
+            
+        }
+        .list-item-wrap {
+            .px2rem(width, 180);
+            .list-grad{
+                .px2rem(width, 180);
+                
+            }
+        }
+        .list-wrap-item:first-child .list-item-wrap {
+            .px2rem(width, 482);
+            .list-cover-wrap {
+                .px2rem(height, 254);
+                .list-grad{
+                    .px2rem(width, 482);
+                    
+                }
+            }
+        }
+    }
+    // 三列布局 无大图
+    &.three-col {
+        height: 2.14rem * 3 - .15rem;
+        .list-cover-wrap {
+            .px2rem(height, 144);
+        }
+        .list-item-wrap {
+            .px2rem(width, 254);
+            .px2rem(margin-right, 19);
+        }
+    }
+    // 两列布局 大图 和 一列布局 组合
+    &.two-col-large-one-col {
+        .px2rem(height, 486);
+
+        .list-cover-wrap {
+            .px2rem(height, 100);
+            
+        }
+        .list-item-wrap {
+            .px2rem(width, 180);
+            .list-grad{
+                .px2rem(width, 482);
+                .px2rem(height, 30);
+            }
+            .list-grad{
+                .px2rem(width, 180);
+                
+            }
+        }
+        .list-wrap-item:first-child .list-item-wrap {
+            .px2rem(width, 482);
+            .list-grad{
+                .px2rem(width, 482);
+            }
+            
+            .list-cover-wrap {
+                .px2rem(height, 254);
+                .introduce{
+                    position: absolute;
+                    .px2rem(left, 501);
+                    .px2rem(top,0);
+                }
+            };
+            
+        }
+        .one-col-style {
+            .list-cover-wrap {
+                .px2rem(height, 144);
+                .list-grad{
+                    .px2rem(width, 257);
+                    
+                }
+            }
+            .list-item-wrap {
+                .px2rem(width, 254);
+                .px2rem(margin-right, 19);
+            }
+        }
+    }
+    // 小图 可换行
+    &.small-item {
+        .list-cover-wrap {
+            .px2rem(height, 105);
+        }
+    }
+    &.full-banner{
+    
+        .list-wrap-item {
+            width: 100%;
+        }
+        .list-item-wrap {
+            width: 100%;
+        }
+        .list-cover-wrap {
+            // width: 100%;
+            .px2rem(width, 1346);
+            .px2rem(height, 148);
+        }
+    }
+    // hover 显示信息
+    &.hover-show-info {
+        .px2rem(height, 240);
+        .list-cover-wrap {
+            .px2rem(height, 110);
+        }
+        .list-info-wrap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+        }
+        .list-link:hover {
+            .list-info-wrap {
+                display: block;
+            }
+        }
+        .list-item-wrap {
+            //margin-right: 10px;
+        }
+        .list-wrap-item:first-child .list-item-wrap {
+            .px2rem(width, 420);
+            .px2rem(margin-right, 42);
+            .list-cover-wrap {
+                .px2rem(height, 240);
+            }
+        }
+    }
+}

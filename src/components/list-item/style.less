@@ -1,0 +1,163 @@
+@import '../../common/base.less';
+.list-item-wrap {
+    display: inline-block;
+    width: 1.95rem;
+    color: #fff;
+    margin-right: 0.35rem;
+    margin-bottom: 0.15rem * 2;
+
+    .list-cover-wrap{
+        display: block;
+        position: relative;
+        
+        .video-img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .box-mark{
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .6;
+            -display: none;
+            position: absolute;
+            .px2rem(border-radius, 5);  
+            cursor: pointer;           
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .list-grad{
+            position: absolute;
+            bottom: 0;
+            .px2rem(height, 30);
+            .px2rem(line-height, 30);
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));
+            .grad-left{
+                color: #ffffff;
+                .px2rem(font-size, 14);
+                .px2rem(padding-left, 8);
+                float: left;
+            }
+            .grad-right{
+                color: #ffffff;
+                .px2rem(font-size, 14);
+                float: right;
+                .px2rem(padding-right, 8);
+            }
+        }
+        .play-img{
+            .px2rem(width, 60);
+            .px2rem(height, 60);
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 9;
+            -display: none;
+        }
+        .introduce{
+            z-index: 10;
+            -display: none;
+            -position: relative;
+            position: absolute;
+            .px2rem(top,0);
+            
+            .triangle-right{
+            height: 0;
+            width: 0;
+            //border: 10px solid red;
+            border-top: 0.15rem solid transparent;
+            border-right: 0.15rem solid rgba(0, 0, 0, .7);
+            border-bottom: 0.15rem solid transparent;
+            position: absolute;
+            .px2rem(top,10);
+            .px2rem(left,-15);
+            -display: none;
+            }
+            .triangle-left{
+                height: 0;
+                width: 0;
+                //border: 10px solid red;
+                border-top: 0.15rem solid transparent;
+                border-left: 0.15rem solid rgba(0, 0, 0, .7);
+                border-bottom: 0.15rem solid transparent;
+                position: absolute;
+                .px2rem(top,10);
+                .px2rem(left,466);
+                -display: none;
+            }
+            .details{
+                .px2rem(width,466); 
+                .px2rem(min-height,174);          
+                .px2rem(padding-top,20);
+                .px2rem(padding-right,18);
+                .px2rem(padding-left,20);
+                .px2rem(padding-bottom,20);
+                .px2rem(border-radius,6);          
+                background: rgba(0, 0, 0, .75);          
+                h4{
+                    .px2rem(font-size,22);            
+                    .px2rem(line-height,22);            
+                    .px2rem(padding-bottom,10);            
+                    border-bottom: 1px solid #585858;
+                    font-weight: normal;
+                    white-space : nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                } 
+                p{
+                    .px2rem(font-size,16); 
+                    .px2rem(line-height,16);
+                    color: #989898; 
+                }
+                .details-time{
+                    float:left;
+                }
+                .details-num{
+                    float:left;
+                    .px2rem(margin-left,55);                        
+                }
+                .details-introduce{
+                    width: 100%;
+                    .px2rem(margin-top,7);            
+                    .px2rem(margin-bottom,5);            
+                    .px2rem(line-height,22);            
+                    .px2rem(height,64);      
+                    overflow: hidden;   
+                    text-overflow: ellipsis;               
+                    float: left;
+                }          
+                span {
+                    .px2rem(font-size,16);          
+                }
+                h5 a{  
+                    display: inline-block;
+                    width: 100%;      
+                    border-top: 1px solid #585858;        
+                    .px2rem(font-size,22);              
+                    .px2rem(padding-top,10);            
+                    .px2rem(padding-left,32);            
+                    font-weight: normal;  
+                    color: #f3d202;   
+                    background: url('../../../static/img/play_small.png') no-repeat;  
+                    background-size: 0.26rem;
+                    background-position: left 0.1rem;  
+                }
+            }
+        } 
+    }
+
+    .list-info-wrap {
+        font-size: .18rem;
+        line-height: 0.34rem;
+        padding-left: 0.08rem;
+        background: #5c5981;
+        color: #ffffff;
+        height: .34rem;
+    }
+}

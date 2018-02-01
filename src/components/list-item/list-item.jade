@@ -1,0 +1,46 @@
+mixin listItem(data, config)
+    .list-item-wrap(class="#{config && config.isSmall ? 'list-item-small-wrap' : ''}")
+        a.list-cover-wrap(href="/details/#{data.jumpId}")
+            .img-cover-wrap
+                if config && config.lazyImg
+                    if config.imgErrorSize
+                        img.img-cover(data-echo="#{data && data.poster ? data.poster: ''}", onerror="imgError(this, '#{config.isFirstEle && config.imgErrorSize.split(',')[1] ? config.imgErrorSize.split(',')[1] : config.imgErrorSize.split(',')[0]}')", ondragstart="return false;")
+                    else
+                        img.img-cover(data-echo="#{data && data.poster ? data.poster : ''}", ondragstart="return false;")
+                else
+                    img.img-cover(src="#{data && data.poster ? data.poster : '/images/logo-aiqiyi.png'}")
+                .cover-info-top
+                    if data.isDubo && !config.isRanks
+                        .info-top-left2 独播
+                    if data.isPurchase
+                        case data.payMark
+                            when 1
+                                .info-top-right VIP
+                            when 2
+                                .info-top-right.pay-mark-paid 付费点播
+                            when 3
+                                .info-top-right.pay-mark-coupon 点播券
+                - var category = {101: '电视剧',102: '电影',103: '动漫',104: '综艺',105: '体育',106: '纪录片',107: '娱乐'}
+                .cover-info-bottom
+                    case data.category
+                        when 101
+                            .info-bottom-left #{data.upStatusDesc || '更新中'}
+                        when 102
+                        when 105
+                            .info-bottom-left #{data.duration||'?:?:?'}
+                        when 104
+                            .info-bottom-left #{data.upStatusDesc}
+                        when 103
+                        when 106
+                        when 107
+                        default
+                            .info-bottom-left 更新至 #{data.episodes} 集
+                    if config && !config.hideScore && data.score
+                        .info-bottom-right
+                            strong #{data.score.split('.')[0]}
+                            | .#{data.score.split('.')[1]}
+
+        if config && !config.hideInfo
+            .list-info-wrap
+                a(href="/details/#{data.clickUrl || data.id}").list-name.text-ellipsis #{data && data.title ? data.title : data.elementName}
+                .list-describe.text-ellipsis #{data && data.subTitle ? data.subTitle : data.focus}
