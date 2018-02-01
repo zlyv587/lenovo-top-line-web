@@ -45,6 +45,7 @@ export default {
             this.list = res.data.data.modules[1].elements;
             this.titles = res.data.data.modules[0].navigation;
             this.totalPages = res.data.data.totalPages;
+            this.total = res.data.data.totalNumber;
         },
         orderByPlay() {
             this.flag = false
