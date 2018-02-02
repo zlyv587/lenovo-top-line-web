@@ -11,7 +11,9 @@ import './main.less';
 import player from './common/player';
 console.log(player.checkAqyExeInstalled)
 
-
+window.error = function(msg) {
+    alert(msg);
+}
 player.checkAqyExeInstalled() // 检测是否安装了爱奇艺播放器
 Vue.prototype.$bus = new Vue();
 

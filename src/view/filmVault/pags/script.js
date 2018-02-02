@@ -60,16 +60,16 @@ export default {
                     val: t
                 });
             } while (temp.length);
-            // if (this.page > this.pagegroup) {
-            //     (this.current > count + 1) && list.unshift({
-            //         text: '...',
-            //         val: list[0].val - 1
-            //     });
-            //     (this.current < this.page - count) && list.push({
-            //         text: '...',
-            //         val: list[list.length - 1].val + 1
-            //     });
-            // }
+            if (this.page > this.pagegroup) {
+                (this.current > count + 1) && list.unshift({
+                    text: '...',
+                    val: list[0].val - 1
+                });
+                (this.current < this.page - count) && list.push({
+                    text: '...',
+                    val: list[list.length - 1].val + 1
+                });
+            }
             return list;
         }
     },

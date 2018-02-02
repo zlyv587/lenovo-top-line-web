@@ -54,7 +54,7 @@
             </ul>
         </div>
         
-        <v-pagination :total="total" :currentPage='current' @pagechange="pagechange" :pagegroup=totalPages></v-pagination>
+        <v-pagination :total="total" :currentPage='current' @pagechange="pagechange" :pagegroup="totalPages>8?8:totalPages"></v-pagination>
     </div>
 </template>
 
