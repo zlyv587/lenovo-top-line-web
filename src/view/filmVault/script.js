@@ -16,7 +16,8 @@ export default {
             activeName: '',
             type: '',
             orderBy: 'play',
-            flag: false
+            flag: false,
+            description :'1'            
         }
     },
     created() {
@@ -45,7 +46,7 @@ export default {
             this.list = res.data.data.modules[1].elements;
             this.titles = res.data.data.modules[0].navigation;
             this.totalPages = res.data.data.totalPages;
-            this.total = res.data.data.totalNumber;
+            this.total = res.data.data.totalNumber;             
         },
         orderByPlay() {
             this.flag = false
